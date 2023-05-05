@@ -1,6 +1,8 @@
 # django-sample
 
-## init setting
+## start
+
+### init
 
 ```bash
 python3 -m venv venv
@@ -10,6 +12,8 @@ pip install Django
 jango-admin startproject mysite .
 python manage.py migrate
 ```
+
+- mysite/settings.py
 
 ```python:settings.py
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
@@ -21,6 +25,21 @@ TIME_ZONE = 'Asia/Tokyo'
 
 ```bash
 python manage.py migrate
+python manage.py runserver
+```
+
+### create app
+
+```bash
+python manage.py startapp blog
+```
+- mysite/settings.py
+
+```python:settings.py
+INSTALLED_APPS = [
+    :
+    'blog.apps.BlogConfig',
+]
 ```
 
 ## clone and setup
